@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!--
+/**
+* @category    ONE
+* @package     ONE_Search
+* @copyright   Copyright (C) 2008-2014 nouthemes.com. All Rights Reserved.
+* @license     GNU General Public License version 2 or later
+* @author      nouthemes.com
+* @email       support.nouthemes.com
+*/
+-->
+<config>
+    <acl>
+        <resources>
+            <all>
+                <title>Allow Everything</title>
+            </all>
+            <admin>
+                <children>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <onesearch>
+                                        <title>One Search</title>
+                                    </onesearch>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>

@@ -1,0 +1,22 @@
+<?php
+/**
+ * @category    ONE
+ * @package     ONE_Filter
+ * @copyright   Copyright (C) 2008-2013 nouthemes.com. All Rights Reserved.
+ * @license     GNU General Public License version 2 or later
+ * @author      nouthemes.com
+ * @email       support.nouthemes.com
+ */
+?>
+<?php $barColor = Mage::helper('onefilter')->getConfig('onefilter/general/bar_color') ?>
+<style type="text/css">
+    #nprogress .bar {
+        background: #<?php echo $barColor?>;
+    }
+    #nprogress .peg {
+        box-shadow: 0 0 15px #<?php echo $barColor?>, 0 0 10px #<?php echo $barColor?>;
+    }
+</style>
+<script type="text/javascript">
+    window.oneFilter = new ONEFilter('oneFilter', <?php echo Mage::helper('onefilter')->getConfig()?>);
+</script>

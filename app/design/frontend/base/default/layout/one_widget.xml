@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<!--
+/**
+* @category    ONE
+* @package     ONE_Widget
+* @copyright   Copyright (C) 2008-2014 nouthemes.com. All Rights Reserved.
+* @license     GNU General Public License version 2 or later
+* @author      nouthemes.com
+* @email       support.nouthemes.com
+*/
+-->
+<layout version="0.1.0">
+    <default>
+		<reference name="head">
+            <action method="addItem">
+                <type>js_css</type>
+                <name>bakery/owl-carousel/owl.carousel.css</name>
+            </action>
+            <action method="addItem">
+                <type>js_css</type>
+                <name>bakery/owl-carousel/owl.theme.css</name>
+            </action>
+            <!--action method="addItem">
+                <type>js_css</type>
+                <name>one/extensions/jquery/plugins/owl-carousel/owl.transitions.css</name>
+            </action-->
+            <action method="addItem">
+                <type>js_css</type>
+                <name>bakery/owl-carousel/effects.css</name>
+            </action>
+            <block type="core/template" name="onewidget_js_cookies" template="one/widget/js.phtml"/>
+		</reference>
+    </default>
+</layout>

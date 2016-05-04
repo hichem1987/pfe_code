@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<!--
+@category    ONE
+@package     ONE_Filter
+@copyright   Copyright (C) 2008-2013 nouthemes.com. All Rights Reserved.
+@license     GNU General Public License version 2 or later
+@author      nouthemes.com
+@email       support.nouthemes.com
+-->
+<layout>
+    <catalog_category_layered>
+        <reference name="head">
+            <!--action method="addJs" ifconfig="onefilter/general/bar">
+                <script>bakery/jquery-1.11.1.min.js</script>
+            </action-->
+            <action method="addJs" ifconfig="onefilter/general/bar">
+                <script>bakery/nprogress/nprogress.js</script>
+            </action>
+            <action method="addItem" ifconfig="onefilter/general/bar">
+                <type>js_css</type>
+                <css>bakery/nprogress/nprogress.css</css>
+            </action>
+            <action method="addJs" ifconfig="onefilter/catalog/enable">
+                <script>bakery/uri/URI.min.js</script>
+            </action>
+            <action method="addJs" ifconfig="onefilter/catalog/enable">
+                <script>bakery/filter.js</script>
+            </action>
+        </reference>
+        <reference name="after_body_start">
+            <block type="core/template" name="one_filter_js" as="one_filter_js">
+                <action method="setTemplate" ifconfig="onefilter/catalog/enable">
+                    <file>one/filter/js.phtml</file>
+                </action>
+            </block>
+        </reference>
+    </catalog_category_layered>
+
+    <catalogsearch_result_index>
+        <reference name="head">
+            <!--action method="addJs" ifconfig="onefilter/general/bar">
+                <script>bakery/jquery-1.11.1.min.js</script>
+            </action-->
+            <action method="addJs" ifconfig="onefilter/general/bar">
+                <script>bakery/nprogress/nprogress.js</script>
+            </action>
+            <action method="addItem" ifconfig="onefilter/general/bar">
+                <type>js_css</type>
+                <css>bakery/nprogress/nprogress.css</css>
+            </action>
+            <action method="addJs" ifconfig="onefilter/catalogsearch/enable">
+                <script>bakery/uri/URI.min.js</script>
+            </action>
+            <action method="addJs" ifconfig="onefilter/catalogsearch/enable">
+                <script>bakery/filter.js</script>
+            </action>
+        </reference>
+        <reference name="after_body_start">
+            <block type="core/template" name="one_filter_js" as="one_filter_js">
+                <action method="setTemplate" ifconfig="onefilter/catalogsearch/enable">
+                    <file>one/filter/js.phtml</file>
+                </action>
+            </block>
+        </reference>
+    </catalogsearch_result_index>
+</layout>

@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<!--
+/**
+* @category    ONE
+* @package     ONE_Extensions
+* @copyright   Copyright (C) 2008-2013 nouthemes.com. All Rights Reserved.
+* @license     GNU General Public License version 2 or later
+* @author      nouthemes.com
+* @email       support.nouthemes.com
+*/
+-->
+<config>
+    <modules>
+        <ONE_Extensions>
+            <version>1.0</version>
+        </ONE_Extensions>
+    </modules>
+
+    <global>
+        <blocks>
+            <oneext>
+                <class>ONE_Extensions_Block</class>
+            </oneext>
+            <adminhtml>
+                <rewrite>
+                    <cms_wysiwyg_images_content>ONE_Extensions_Block_Adminhtml_Cms_Wysiwyg_Images_Content</cms_wysiwyg_images_content>
+                </rewrite>
+            </adminhtml>
+        </blocks>
+        <helpers>
+            <oneext>
+                <class>ONE_Extensions_Helper</class>
+            </oneext>
+            <cms>
+                <rewrite>
+                    <wysiwyg_images>ONE_Extensions_Helper_Cms_Wysiwyg_Images</wysiwyg_images>
+                </rewrite>
+            </cms>
+        </helpers>
+    </global>
+
+    <admin>
+        <routers>
+            <oneadmin>
+                <use>admin</use>
+                <args>
+                    <module>ONE_Extensions</module>
+                    <frontName>oneadmin</frontName>
+                </args>
+            </oneadmin>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <ONE_Extensions before="Mage_Adminhtml">ONE_Extensions_Adminhtml</ONE_Extensions>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+</config>

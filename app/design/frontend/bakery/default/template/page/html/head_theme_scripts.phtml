@@ -1,0 +1,12 @@
+<?php 
+$isResponsive = Mage::helper('bakery')->getThemeLayoutCfg('responsive/responsive');
+?>
+<script type="text/javascript">
+    var oneThemes = {};
+    oneThemes.responsive = <?php echo ($isResponsive ? 'true' : 'false'); ?>;
+    <?php if($isResponsive):?>
+    oneThemes.maxBreak = 1170;
+    <?php else:?>
+    oneThemes.maxBreak = 970;
+    <?php endif;?>
+</script>

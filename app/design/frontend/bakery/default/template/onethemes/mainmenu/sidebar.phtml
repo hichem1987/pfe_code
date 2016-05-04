@@ -1,0 +1,80 @@
+<!-- navigation BOF -->
+
+<div class="one-menu one-effect-slide">
+    <div class="one-menu-active">
+			<div class="navbar-header">
+				<div class="navbar-toggle" type="button" data-toggle="collapse">
+					
+					<button type="button" class="one-close-canvas"></button>
+				</div>
+			</div>
+	</div>
+    <div class="sidebar">
+        <ul id="one_accordionmenu" class="nav-accordion nav-mobile-accordion">
+            <li><a href="<?php echo $this->getBaseUrl(); ?>"><?php echo $this->__('Home'); ?></a></li>
+            <?php echo $this->renderCategoriesMenuHtml(TRUE, FALSE, 0, 'level-top'); ?>
+            <?php 
+                if(Mage::getStoreConfig('bakery/menu/enable_custom')){
+                    $getidentifier = Mage::getStoreConfig('bakery/menu/static_identifier');
+                    $arrayidentifier = explode(";", $getidentifier);
+                    foreach($arrayidentifier as $mcustom){
+                        $static_block = explode(':', $mcustom);
+                        $custom_menu = Mage::getModel('cms/block')->load($static_block[0]);
+                        if($static_block[1]) $class = 'menu-item-'.$static_block[1];
+                        if($custom_menu->getIsActive()) {
+                            echo '
+                            <li class="level0 level-top parent custom-block '.$class.'">
+                                <a href="#" class="level-top">
+                                    <span>'.$custom_menu->getTitle().'</span>
+                                </a>
+                                <div class="sub-wrapper">'.$this->getLayout()->createBlock('cms/block')->setBlockId($static_block[0])->toHtml().'</div>
+                            </li>';
+                        }
+                    } 
+                    $urlkey = Mage::getStoreConfig('bakery/menu/url_key');
+                    $arrayUrlKey = explode(";", $urlkey);
+                    foreach($arrayUrlKey as $url){
+                        $condition = explode(':', $url);
+                        $page = Mage::getModel('cms/page')->load($condition[0], 'identifier');
+                        if(isset($condition[1])) $class = 'menu-item-'.$condition[1];
+                        if($page->getIsActive()) {
+                    ?> 
+
+                        <li class="level0 level-top parent custom-block <?php if($routeName == 'cms' && $identifier == $page->getIdentifier()) {echo " active";}?> <?php echo $class;?>">
+                            <a href="<?php echo Mage::helper('cms/page')->getPageUrl($condition[0]);?>" class="level-top">
+                                <span><?php echo $page->getTitle();?></span>
+                            </a> 
+                        </li> 
+                    <?php 
+                        }
+                    }
+                }
+            ?>
+            <?php if($top_menu = 1){?>
+                <li class="level0 level-top">
+                    <a href="<?php echo $this->getUrl('blog');?>" class="level-top">
+                        <?php echo "blog";?>
+                    </a>
+                </li> 
+            <?php } ?>
+            <li class="level0 level-top">
+                <a href="<?php echo $this->getUrl('contacts');?>" class="level-top">
+                    <?php echo "contact";?>
+                </a>
+            </li> 
+        </ul>
+        <script type="text/javascript">
+            $one(document).ready(function() {
+                $one("#one_accordionmenu").oneAccordionMenu({
+                    accordion:true,
+                    speed: 400,
+                    closedSign: 'collapse',
+                    openedSign: 'expand',
+                    mouseType: 0,
+                    easing: 'easeInOutQuad'
+                });
+            });
+        </script>
+    </div>
+</div>
+<div class="site-overlay"></div>

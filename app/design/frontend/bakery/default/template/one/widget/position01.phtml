@@ -1,0 +1,54 @@
+<?php
+/**
+ * @category    ONE
+ * @package     ONE_Widget
+ * @copyright   Copyright (C) 2008-2014 nouthemes.com. All Rights Reserved.
+ * @license     GNU General Public License version 2 or later
+ * @author      nouthemes.com
+ * @email       support.nouthemes.com
+ */
+?>
+<?php
+$theme = $this->helper('bakery');
+$_title             = $this->getConfig('widget_title');
+$_rowCount          = $this->getConfig('row');
+$_scroll            = $this->getConfig('scroll');
+$_column            = $this->getConfig('column');
+$_scroll            = $this->getConfig('scroll');
+$numbercolumn_slide = $this->getData('column');
+$nav_prev = $this->getData('navigation_prev');
+$nav_next = $this->getData('navigation_next');
+?>
+
+
+<div class="<?php echo $this->getConfig('classes') ?>">
+    <div class="main-heading">
+        <div class="heading-wrapper-title">
+            <?php if ($_title): ?>
+                <h3><span><?php echo $_title ?></span></h3>
+            <?php endif ?>
+        </div>
+        <div class="desc-title" >Check some of our best products</div>
+        
+    </div>
+    <?php echo $this->renderCollection('collection', $this->getData('mode'), 'one/widget/collection_position01.phtml') ?>
+<!--    <div class="load-product"><a class="button-void" href="#">See all our products</a></div>-->
+</div>
+<?php if ($_scroll == 1):?>
+    <?php echo '<script type="text/javascript" src="'. $this->getBaseUrl().'js/bakery/owl.carousel.js"></script>'?>
+
+<script type="text/javascript">
+    jQuery(document).ready(function($) {
+
+      jQuery(".slide-product").owlCarousel({
+        items : <?php echo $numbercolumn_slide; ?>,
+        lazyLoad : true,
+        navigation : true,
+        navigationText: [<?php echo $nav_prev; echo $nav_next;?>] 
+        
+      });
+
+    });
+</script>
+
+<?php endif ?>

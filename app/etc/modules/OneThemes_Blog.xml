@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <OneThemes_Blog>
+            <active>true</active>
+            <codePool>local</codePool>
+        </OneThemes_Blog>
+    </modules>
+</config>

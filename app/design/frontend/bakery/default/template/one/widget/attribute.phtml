@@ -1,0 +1,72 @@
+<?php
+/**
+ * @category    ONE
+ * @package     ONE_Widget
+ * @copyright   Copyright (C) 2008-2014 nouthemes.com. All Rights Reserved.
+ * @license     GNU General Public License version 2 or later
+ * @author      nouthemes.com
+ * @email       support.nouthemes.com
+ */
+?>
+<?php
+$attributes = $this->getAttibuteOptions();
+$id         = $this->getConfig('id');
+$scroll     = $this->getConfig('scroll');
+$title      = $this->getConfig('widget_title');
+
+$_rowCount          = $this->getConfig('row');
+$_scroll            = $this->getConfig('scroll');
+$_column            = $this->getConfig('column');
+$_scroll            = $this->getConfig('scroll');
+$numbercolumn_slide = $this->getData('column');
+$nav_prev = $this->getData('navigation_prev');
+$nav_next = $this->getData('navigation_next');
+?>
+<div class="<?php echo $this->getConfig('classes') ?>">
+    <div class="main-heading">
+        <div class="heading-wrapper-title">
+            <?php if ($title): ?>
+                <h3><span><?php echo $title ?></span></h3>
+            <?php endif ?>
+        </div>
+    </div>
+    <div class="<?php echo $_scroll==1 ? 'attribute' : '' ?>">
+        <?php foreach ($attributes as $attribute): ?>
+            <div class="image">
+                <?php if (isset($attribute['link'])): ?>
+                    <a href="<?php //echo $attribute['link'] ?>" title="<?php echo $attribute['label'] ?>">
+                <?php endif ?>
+                <?php if ($attribute['image']): ?>
+                    <?php if ($scroll == 1): ?>
+                        <img class="lazyOwl img-responsive" data-src="<?php echo $attribute['image'] ?>" alt="<?php echo $attribute['label'] ?>" src="<?php echo $attribute['image'] ?>" />
+                    <?php else: ?>
+                        <img src="<?php echo $attribute['image'] ?>" alt="<?php echo $attribute['label'] ?>" />
+                    <?php endif ?>
+                <?php else: ?>
+                    <span><?php echo $attribute['label'] ?></span>
+                <?php endif ?>
+                <?php if (isset($attribute['link'])): ?>
+                    </a>
+                <?php endif ?>
+            </div>
+        <?php endforeach ?>
+    </div>
+</div>
+<?php if ($_scroll == 1):?>
+    <?php echo '<script type="text/javascript" src="'. $this->getBaseUrl().'js/bakery/owl.carousel.js"></script>'?>
+
+<script type="text/javascript">
+    jQuery(document).ready(function($) {
+
+      jQuery(".attribute").owlCarousel({
+        items : <?php echo $numbercolumn_slide; ?>,
+        lazyLoad : true,
+        navigation : true,
+        navigationText: [<?php echo $nav_prev; echo $nav_next;?>] 
+        
+      });
+
+    });
+</script>
+
+<?php endif ?>

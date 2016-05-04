@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<!--
+/**
+* @category    ONE
+* @package     ONE_Attribute
+* @copyright   Copyright (C) 2008-2014 nouthemes.com. All Rights Reserved.
+* @license     GNU General Public License version 2 or later
+* @author      nouthemes.com
+* @email       support.nouthemes.com
+*/
+-->
+<config>
+    <modules>
+        <ONE_Attribute>
+            <version>1.0</version>
+        </ONE_Attribute>
+    </modules>
+
+    <global>
+        <helpers>
+            <oneattribute>
+                <class>ONE_Attribute_Helper</class>
+            </oneattribute>
+        </helpers>
+        <blocks>
+            <adminhtml>
+                <rewrite>
+                    <catalog_product_attribute_edit_tab_options>ONE_Attribute_Block_Adminhtml_Catalog_Product_Attribute_Edit_Tab_Options</catalog_product_attribute_edit_tab_options>
+                </rewrite>
+            </adminhtml>
+            <catalog>
+                <rewrite>
+                    <product_view_type_configurable>ONE_Attribute_Block_Catalog_Product_View_Type_Configurable</product_view_type_configurable>
+                </rewrite>
+            </catalog>
+        </blocks>
+        <resources>
+            <oneattribute_setup>
+                <setup>
+                    <module>ONE_Attribute</module>
+                </setup>
+            </oneattribute_setup>
+        </resources>
+        <models>
+            <oneattribute>
+                <class>ONE_Attribute_Model</class>
+            </oneattribute>
+            <catalog_resource>
+                <rewrite>
+                    <attribute>ONE_Attribute_Model_Resource_Attribute</attribute>
+                </rewrite>
+            </catalog_resource>
+            <!--catalog>
+                <rewrite>
+                    <layer_filter_attribute>ONE_Attribute_Model_Catalog_Layer_Filter_Attribute</layer_filter_attribute>
+                </rewrite>
+            </catalog-->
+        </models>
+    </global>
+
+    <adminhtml>
+        <events>
+            <controller_action_layout_render_before_adminhtml_catalog_product_attribute_edit>
+                <observers>
+                    <oneattribute>
+                        <class>ONE_Attribute_Model_Observer</class>
+                        <method>updateLayout</method>
+                    </oneattribute>
+                </observers>
+            </controller_action_layout_render_before_adminhtml_catalog_product_attribute_edit>
+        </events>
+    </adminhtml>
+
+    <frontend>
+        <layout>
+            <updates>
+                <oneattribute>
+                    <file>one_attribute.xml</file>
+                </oneattribute>
+            </updates>
+        </layout>
+    </frontend>
+
+    <default>
+        <oneattribute>
+            <general>
+                <show>0</show>
+            </general>
+        </oneattribute>
+    </default>
+</config>

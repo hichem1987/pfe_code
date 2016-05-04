@@ -1,0 +1,110 @@
+<root><blocks><cms_block><title>Footer Copyright</title><identifier>footer_block</identifier><content><![CDATA[<div class="box-content-footer collapsible footer-static">
+<div class="block-content">
+<div class="box-content-top box-content-right">
+<div class="icon-style-1 icon-size clearafter">
+<div class="iconbox-icon facebook first"><a class="fa fa-facebook" href="https://www.facebook.com/">&nbsp;</a></div>
+<div class="iconbox-icon google"><a class="fa fa-google-plus" href="https://plus.google.com/">&nbsp;</a></div>
+<div class="iconbox-icon twitter"><a class="fa fa-twitter" href="https://twitter.com/">&nbsp;</a></div>
+<div class="iconbox-icon tumplr"><a class="fa fa-youtube-play" href="https://www.tumblr.com/">&nbsp;</a></div>
+<div class="iconbox-icon linke last"><a class="fa fa-linkedin" href="http://www.linkedin.com">&nbsp;</a></div>
+<div class="iconbox-icon pinterest"><a class="fa fa-pinterest" href="https://www.pinterest.com/">&nbsp;</a></div>
+</div>
+</div>
+</div>
+</div>]]></content><is_active>1</is_active><stores><item>0</item></stores></cms_block><cms_block><title>Footer Top</title><identifier>footer-top-01</identifier><content><![CDATA[<div class="information collapsible mobile-collapsible">
+<div class="footer-static main-heading">
+<h3><span class="com">Company</span> <span class="accordion-footer visible-xs accordion-show">accordion footer</span></h3>
+<ul class="clearfix block-content-statick acc">
+<li class="item first"><a title="" href="#"><span class="fa fa-angle-right">&nbsp;</span>Welcome</a></li>
+<li class="item"><a title="" href="#"><span class="fa fa-angle-right">&nbsp;</span>About Us</a></li>
+<li class="item"><a title="" href="#"><span class="fa fa-angle-right">&nbsp;</span>Our Team</a></li>
+<li class="item last"><a title="" href="#"><span class="fa fa-angle-right">&nbsp;</span>Contact Us</a></li>
+</ul>
+</div>
+</div>]]></content><is_active>1</is_active><stores><item>0</item></stores></cms_block><cms_block><title>Footer Top</title><identifier>footer-top-02</identifier><content><![CDATA[<div class="about my-account collapsible mobile-collapsible">
+<div class="footer-static main-heading">
+<h3><span class="com">Quick Links</span> <span class="accordion-footer visible-xs accordion-show">accordion footer</span></h3>
+<ul class="clearfix block-content-statick acc">
+<li class="item first"><a title="" href="#"><span class="fa fa-angle-right">&nbsp;</span>Contact Us</a></li>
+<li class="item"><a title="" href="#"><span class="fa fa-angle-right">&nbsp;</span>Security Policy</a></li>
+<li class="item"><a title="" href="#"><span class="fa fa-angle-right">&nbsp;</span>Site Map</a></li>
+<li class="item last"><a title="" href="#"><span class="fa fa-angle-right">&nbsp;</span>Support System</a></li>
+</ul>
+</div>
+</div>]]></content><is_active>1</is_active><stores><item>0</item></stores></cms_block><cms_block><title>Footer Top</title><identifier>footer-top-03</identifier><content><![CDATA[<div class="about my-account collapsible mobile-collapsible">
+<div class="footer-static main-heading">
+<h3><span class="com">My account</span> <span class="accordion-footer visible-xs accordion-show">accordion footer</span></h3>
+<ul class="clearfix block-content-statick acc">
+<li class="item first"><a title="" href="#"><span class="fa fa-angle-right">&nbsp;</span>My Account</a></li>
+<li class="item"><a title="" href="#"><span class="fa fa-angle-right">&nbsp;</span>Order History</a></li>
+<li class="item"><a title="" href="#"><span class="fa fa-angle-right">&nbsp;</span>Wish List</a></li>
+<li class="item last"><a title="" href="#"><span class="fa fa-angle-right">&nbsp;</span>Affiliates</a></li>
+</ul>
+</div>
+</div>]]></content><is_active>1</is_active><stores><item>0</item></stores></cms_block><cms_block><title>Footer Top</title><identifier>footer-top-04</identifier><content><![CDATA[<div class="collapsible mobile-collapsible">{{block type="newsletter/subscribe" template="newsletter/subscribe.phtml"}}</div>]]></content><is_active>1</is_active><stores><item>0</item></stores></cms_block><cms_block><title>Main Left</title><identifier>one-main-left</identifier><content><![CDATA[<div class="one-banner-center hidden-xs">
+<div class="one-banner-center-inner main_slide_inner one-main-left long-box-shadow">
+<div class="banner first">
+<div class="text">
+<h3>Lying Chair on the Beach</h3>
+<p>Proin a justo arcu dolor vel velit elementum eget volutpat</p>
+<a href="#">more <span class="fa fa-angle-right">&nbsp;</span></a></div>
+<div class="img"><a href="#"><img class="img-responsive" src="{{media url="wysiwyg/onethemes/static/static-01.png"}}" alt="" /></a></div>
+</div>
+</div>
+</div>]]></content><is_active>1</is_active><stores><item>0</item></stores></cms_block><cms_block><title>Main Right</title><identifier>one-main-right</identifier><content><![CDATA[<div class="one-banner-center hidden-xs">
+<div class="one-banner-center-inner main_slide_inner one-main-right long-box-shadow">
+<div class="banner first">
+<div class="text">
+<h3>Sofa for Kids</h3>
+<p>Cool Modular Sofa for Kids PS30 Puzzle transform into a mattres.</p>
+<a href="#">more <span class="fa fa-angle-right">&nbsp;</span></a></div>
+<div class="img"><a href="#"><img class="img-responsive" src="{{media url="wysiwyg/onethemes/static/static-02.png"}}" alt="" /></a></div>
+</div>
+</div>
+</div>]]></content><is_active>1</is_active><stores><item>0</item></stores></cms_block><cms_block><title>Main Block Content</title><identifier>main-block-content</identifier><content><![CDATA[<div class="row">
+<div class="main-homepage">
+<div class="col-sm-4 col-md-4 pl0 pr0"><a href="#"><img class="img-responsive" src="{{media url="wysiwyg/onethemes/static/static-1.png"}}" alt="" /></a></div>
+<div class="col-sm-8 col-md-8 pl0 pr0"><a href="#"><img class="img-responsive" src="{{media url="wysiwyg/onethemes/static/static-2.png"}}" alt="" /></a></div>
+</div>
+</div>]]></content><is_active>1</is_active><stores><item>0</item></stores></cms_block><cms_block><title>Block Left</title><identifier>block_left</identifier><content><![CDATA[<div class="block"><a href="#"><img class="img-responsive" src="{{media url="wysiwyg/onethemes/static/static-12.png"}}" alt="" /></a></div>]]></content><is_active>1</is_active><stores><item>0</item></stores></cms_block><cms_block><title>Left Slide 1</title><identifier>left_slide1</identifier><content><![CDATA[<p><img class="img-responsive" src="{{media url="wysiwyg/onethemes/static/static-siderbar-product1.jpg"}}" alt="" /></p>]]></content><is_active>1</is_active><stores><item>0</item></stores></cms_block><cms_block><title>Left Slide 2</title><identifier>left_slide2</identifier><content><![CDATA[<p><img class="img-responsive" src="{{media url="wysiwyg/onethemes/static/static-siderbar-product2.jpg"}}" alt="" /></p>]]></content><is_active>1</is_active><stores><item>0</item></stores></cms_block><cms_block><title>Left Slide 3</title><identifier>left_slide3</identifier><content><![CDATA[<p><img class="img-responsive" src="{{media url="wysiwyg/onethemes/static/static-siderbar-product3.jpg"}}" alt="" /></p>]]></content><is_active>1</is_active><stores><item>0</item></stores></cms_block><cms_block><title>Custom Menu</title><identifier>custom_menu</identifier><content><![CDATA[<div class="onemenu-block onemenu-block-top grid-full std">
+<div class="col-lg-12 col-sm-12 col-md-4 col-xs-12 "><img class="img-responsive" src="{{media url="wysiwyg/onethemes/static/menu-bottom.jpg"}}" alt="" /></div>
+</div>
+<div class="level0 shown-sub">
+<div class="mm-item-base clearfix">
+<div class="onemenu-block onemenu-block-center menu-items grid12-8 itemgrid itemgrid-3col">
+<ul class="level0">
+<li class="level1 groups item nav-1-1 first"><a href="#"> Category </a>
+<div class="groups-wrapper">
+<ul class="level1">
+<li class="level2 nav-1-1-1 first"><a href="women.html"> <span>Women </span></a></li>
+<li class="level2 nav-1-1-2"><a href="computers-laptop.html"> <span>Computers &amp; Laptop </span></a></li>
+<li class="level2 nav-1-1-3"><a href="game-consoles.html"><span>Game &amp; Consoles</span></a></li>
+<li class="level2 nav-1-1-4 last"><a href="game-toys.html"> <span>Game &amp; Toys</span></a></li>
+</ul>
+</div>
+</li>
+<li class="level1 groups item nav-1-2"><a href="#"> <span class="title_group">By Brands</span> </a>
+<div class="groups-wrapper">
+<ul class="level1">
+<li class="level2 nav-1-2-5 first"><a href="#"> <span>Lincoln</span> </a></li>
+<li class="level2 nav-1-2-6 parent"><a href="#"> <span>Lotus</span> </a></li>
+<li class="level2 nav-1-2-7"><a href="#"> <span>Maserati</span> </a></li>
+<li class="level2 nav-1-2-8 last"><a href="#"> <span>Hyundai</span> </a></li>
+</ul>
+</div>
+</li>
+<li class="level1 groups item nav-1-3 last"><a href="#"> <span class="title_group">New Arrivals</span> </a>
+<div class="groups-wrapper">
+<ul class="level1">
+<li class="level2 nav-1-3-9 first"><a href="fashion/men.html">Men</a></li>
+<li class="level2 nav-1-3-10"><a href="fashion/women.html">Women</a></li>
+<li class="level2 nav-1-3-11"><a href="fashion/kids.html"><span>Kids</span></a></li>
+<li class="level2 nav-1-3-12 last"><a href="fashion/accessories.html"><span>Accessories</span></a></li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="menu-static-blocks onemenu-block onemenu-block-right grid12-4"><img class="img-responsive" src="{{media url="wysiwyg/onethemes/static/static-menu-03.png"}}" alt="" /></div>
+</div>
+</div>]]></content><is_active>0</is_active><stores><item>0</item></stores></cms_block></blocks></root>

@@ -1,0 +1,58 @@
+<?php
+/**
+ * @category    ONE
+ * @package     ONE_Widget
+ * @copyright   Copyright (C) 2008-2014 nouthemes.com. All Rights Reserved.
+ * @license     GNU General Public License version 2 or later
+ * @author      nouthemes.com
+ * @email       support.nouthemes.com
+ */
+?>
+<?php
+$blocks     = $this->getBlocks();
+$id         = $this->getConfig('id');
+$scroll     = $this->getConfig('scroll');
+$title      = $this->getConfig('widget_title');
+
+$_rowCount          = $this->getConfig('row');
+$_scroll            = $this->getConfig('scroll');
+$_column            = $this->getConfig('column');
+$_scroll            = $this->getConfig('scroll');
+$numbercolumn_slide = $this->getData('column');
+$nav_prev = $this->getData('navigation_prev');
+$nav_next = $this->getData('navigation_next');
+?>
+
+<div class="block <?php echo $this->getConfig('classes') ?>">
+    <?php if ($title): ?>
+    <div class="block-title">
+		<strong><span><?php echo $title ?></span></strong>
+	</div>
+	<?php endif ?>
+	 <div class="<?php echo $scroll==1 ? 'static-blocl' : '' ?> block-static">
+		<?php foreach ($blocks as $block): ?>
+			<div class="<?php echo $block['class']?>">
+				<?php echo $block['content'] ?>
+			</div>
+		<?php endforeach ?>
+	</div>
+</div>
+
+<?php if ($_scroll == 1):?>
+    <?php echo '<script type="text/javascript" src="'. $this->getBaseUrl().'js/bakery/owl.carousel.js"></script>'?>
+
+<script type="text/javascript">
+    jQuery(document).ready(function($) {
+
+      jQuery(".static-blocl").owlCarousel({
+        items : <?php echo $numbercolumn_slide; ?>,
+        lazyLoad : true,
+        navigation : true,
+        navigationText: [<?php echo $nav_prev; echo $nav_next;?>] 
+        
+      });
+
+    });
+</script>
+
+<?php endif ?>

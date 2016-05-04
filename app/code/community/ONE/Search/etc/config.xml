@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<!--
+/**
+* @category    ONE
+* @package     ONE_Search
+* @copyright   Copyright (C) 2008-2014 nouthemes.com. All Rights Reserved.
+* @license     GNU General Public License version 2 or later
+* @author      nouthemes.com
+* @email       support.nouthemes.com
+*/
+-->
+<config>
+    <modules>
+        <ONE_Search>
+            <version>0.0.1</version>
+        </ONE_Search>
+    </modules>
+
+    <global>
+        <blocks>
+            <onesearch>
+                <class>ONE_Search_Block</class>
+            </onesearch>
+        </blocks>
+        <helpers>
+            <onesearch>
+                <class>ONE_Search_Helper</class>
+            </onesearch>
+        </helpers>
+    </global>
+
+    <frontend>
+        <layout>
+            <updates>
+                <onesearch>
+                    <file>one_search.xml</file>
+                </onesearch>
+            </updates>
+        </layout>
+    </frontend>
+</config>

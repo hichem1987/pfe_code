@@ -1,0 +1,228 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2012 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+?>
+<?php
+$theme = $this->helper('bakery');
+$isResponsive = Mage::helper('bakery')->getThemeLayoutCfg('responsive/responsive');
+?>
+<meta http-equiv="Content-Type" content="<?php echo $this->getContentType() ?>" />
+<title><?php echo $this->getTitle() ?></title>
+<meta name="description" content="<?php echo htmlspecialchars($this->getDescription()) ?>" />
+<meta name="keywords" content="<?php echo htmlspecialchars($this->getKeywords()) ?>" />
+<meta name="robots" content="<?php echo htmlspecialchars($this->getRobots()) ?>" />
+<?php if ($isResponsive) { ?>
+    <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1" />
+<?php } ?>
+<link rel="icon" href="<?php echo $this->getFaviconFile(); ?>" type="image/x-icon" />
+<link rel="shortcut icon" href="<?php echo $this->getFaviconFile(); ?>" type="image/x-icon" />
+<!--[if IE 8 ]><html class="ie8"<![endif]-->
+<!--[if IE 9 ]><html class="ie9"><![endif]-->
+<!--[if lt IE 7]>
+<script type="text/javascript">
+//<![CDATA[
+    var BLANK_URL = '<?php echo $this->helper('core/js')->getJsUrl('blank.html') ?>';
+    var BLANK_IMG = '<?php echo $this->helper('core/js')->getJsUrl('spacer.gif') ?>';
+//]]>
+</script>
+<![endif]-->
+<?php echo $this->getCssJsHtml() ?>
+<?php echo $this->getLayout()->createBlock('core/template', 'head.theme.scripts')->setTemplate('page/html/head_theme_scripts.phtml')->toHtml(); ?>
+<?php echo $this->getChildHtml() ?>
+<?php echo $this->helper('core/js')->getTranslatorScript() ?>
+<?php echo $this->getIncludes() ?>
+
+<?php
+//Include Google fonts character subsets (such as extended latin, cyrillic)
+$charSubset = 'amp;subset=latin';
+if ($theme->getThemeDesignCfg('font/primary_char_latin_ext'))
+    $charSubset .= 'amp;latin-ext';
+?>
+<?php if ($theme->getThemeDesignCfg('font/primary_font_family_group') == 'google'): ?>
+    <link href='//fonts.googleapis.com/css?family=<?php echo str_replace(' ', '+', $theme->getThemeDesignCfg('font/primary_font_family'));
+    echo $charSubset; ?>' rel='stylesheet' type='text/css' />
+<?php endif; ?>
+<?php if ($theme->getThemeDesignCfg('fontrevslider/revslider_primary_font_family_group') == 'google'): ?>
+    <link href='//fonts.googleapis.com/css?family=<?php echo str_replace(' ', '+', $theme->getThemeDesignCfg('fontrevslider/revslider_primary_font_family'));
+    echo $charSubset; ?>' rel='stylesheet' type='text/css' />
+<?php endif; ?>
+<script type="text/javascript"
+        src="https://maps.googleapis.com/maps/api/js?sensor=true">
+</script>
+<script type="text/javascript">
+    var grayStyles = [
+    {
+        "featureType": "landscape",
+        "stylers": [
+            {
+                "saturation": -100
+            },
+            {
+                "lightness": 65
+            },
+            {
+                "visibility": "on"
+            }
+        ]
+    },
+    {
+        "featureType": "poi",
+        "stylers": [
+            {
+                "saturation": -100
+            },
+            {
+                "lightness": 51
+            },
+            {
+                "visibility": "simplified"
+            }
+        ]
+    },
+    {
+        "featureType": "road.highway",
+        "stylers": [
+            {
+                "saturation": -100
+            },
+            {
+                "visibility": "simplified"
+            }
+        ]
+    },
+    {
+        "featureType": "road.arterial",
+        "stylers": [
+            {
+                "saturation": -100
+            },
+            {
+                "lightness": 30
+            },
+            {
+                "visibility": "on"
+            }
+        ]
+    },
+    {
+        "featureType": "road.local",
+        "stylers": [
+            {
+                "saturation": -100
+            },
+            {
+                "lightness": 40
+            },
+            {
+                "visibility": "on"
+            }
+        ]
+    },
+    {
+        "featureType": "transit",
+        "stylers": [
+            {
+                "saturation": -100
+            },
+            {
+                "visibility": "simplified"
+            }
+        ]
+    },
+    {
+        "featureType": "administrative.province",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "water",
+        "elementType": "labels",
+        "stylers": [
+            {
+                "visibility": "on"
+            },
+            {
+                "lightness": -25
+            },
+            {
+                "saturation": -100
+            }
+        ]
+    },
+    {
+        "featureType": "water",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "hue": "#ffff00"
+            },
+            {
+                "lightness": -25
+            },
+            {
+                "saturation": -97
+            }
+        ]
+    }
+      ];
+        var content = '<div id="iw-container">' +
+                    "<img src='<?php echo $this->getSkinUrl('images/logo.png'); ?>' title='test' >" +
+                  '</div>';
+
+  // A new Info Window is created and set content
+  var infowindow = new google.maps.InfoWindow({
+    content: content,
+
+    // Assign a maximum value for the width of the infowindow allows
+    // greater control over the various content elements
+    maxWidth: 350
+  });
+    function initialize() {
+        var mapOptions = {
+            styles: grayStyles,
+            center: new google.maps.LatLng(40.69847032728747, -73.9514422416687),
+//                        center: new google.maps.LatLng(40.583127, -73.660927),
+            zoom: 10,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        var map = new google.maps.Map(document.getElementById("google_map"),
+                mapOptions);
+var marker = new google.maps.Marker({
+  position: new google.maps.LatLng(40.583127, -73.660927),
+  map: map,
+  icon: '<?php echo $this->getSkinUrl('images/pin.png'); ?>'
+});
+infowindow.open(map,marker);
+  google.maps.event.addListener(marker, 'click', function() {
+    infowindow.open(map,marker);
+  });
+}
+    google.maps.event.addDomListener(window, 'load', initialize);
+
+</script>
+

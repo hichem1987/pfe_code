@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!--
+/**
+* @category    ONE
+* @package     ONE_Search
+* @copyright   Copyright (C) 2008-2014 nouthemes.com. All Rights Reserved.
+* @license     GNU General Public License version 2 or later
+* @author      nouthemes.com
+* @email       support.nouthemes.com
+*/
+-->
+<layout>
+    <default>
+        <reference name="header">
+            <action method="unsetChild"><block>topSearch</block></action>
+            <block type="onesearch/widget" name="top.search" as="topSearch"/>
+        </reference>
+    </default>
+</layout>

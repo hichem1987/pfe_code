@@ -1,0 +1,113 @@
+<?xml version="1.0"?>
+<!--
+/**
+ *
+ * @category     ONE
+ * @package      ONE_Newsletter
+ *
+ * @copyright    Copyright (C) 2008-2013 nouthemes.com. All Rights Reserved.
+ * @license      GNU General Public License version 2 or later;
+ * @author       nouthemes.com
+ * @email        support.nouthemes.com
+ **
+ */
+ -->
+<config>
+    <modules>
+        <ONE_Newsletter>
+            <version>2.0.0</version>
+        </ONE_Newsletter>
+    </modules>
+    <global>
+        <models> 
+            <onenewsletter>
+                <class>ONE_Newsletter_Model</class>
+            </onenewsletter>
+        </models>
+        <resources>
+            <onenewsletter_setup>
+                <setup>
+                    <module>ONE_Newsletter</module>
+                </setup>
+            </onenewsletter_setup>
+        </resources>
+        <blocks>
+            <onenewsletter>
+                <class>ONE_Newsletter_Block</class>
+            </onenewsletter>
+        </blocks>
+        <helpers>
+            <onenewsletter>
+                <class>ONE_Newsletter_Helper</class>
+            </onenewsletter>
+        </helpers>
+    </global>
+    <frontend>
+        <routers>
+            <onenewsletter>
+                <use>standard</use>
+                <args>
+                    <module>ONE_Newsletter</module>
+                    <frontName>onenewsletter</frontName>
+                </args>
+            </onenewsletter>
+        </routers>
+        <layout>
+            <updates>
+                <onenewsletter>
+                    <file>one_newsletter.xml</file>
+                </onenewsletter>
+            </updates>
+        </layout>
+        <translate>
+            <modules>
+                <onenewsletter>
+                    <files>
+                        <default>ONE_Newsletter.csv</default>
+                    </files>
+                </onenewsletter>
+            </modules>
+        </translate>
+    </frontend>
+    <admin>
+        <routers>
+            <onenewsletter>
+                <use>admin</use>
+                <args>
+                    <module>ONE_Newsletter</module>
+                    <frontName>onenewsletter</frontName>
+                </args>
+            </onenewsletter>
+        </routers>
+    </admin>
+    <adminhtml>
+        <layout>
+            <updates>
+                <onenewsletter>
+                    <file>one_newsletter.xml</file>
+                </onenewsletter>
+            </updates>
+        </layout>
+        <translate>
+            <modules>
+                <onenewsletter>
+                    <files>
+                        <default>ONE_Newsletter.csv</default>
+                    </files>
+                </onenewsletter>
+            </modules>
+        </translate>
+    </adminhtml>
+    <default>
+        <onenewsletter>
+            <display_options>
+                <enable>1</enable>
+                <background_color>#FFFFFF</background_color>
+                <background_image></background_image>
+                <intro> <![CDATA[<p>Subscribe to the ONE Smilax mailing list to receive updates on new arrivals, special offers and other discount information.</p>]]></intro>
+                <width>700</width>
+                <height>300</height>
+            </display_options>
+        </onenewsletter>
+    </default>
+</config>

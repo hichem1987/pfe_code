@@ -1,0 +1,71 @@
+<?php
+/**
+ * @category    ONE
+ * @package     ONE_Widget
+ * @copyright   Copyright (C) 2008-2014 nouthemes.com. All Rights Reserved.
+ * @license     GNU General Public License version 2 or later
+ * @author      nouthemes.com
+ * @email       support.nouthemes.com
+ */
+?>
+<?php
+$attributes = $this->getAttibuteOptions();
+$id         = $this->getConfig('id');
+$scroll     = $this->getConfig('scroll');
+$title      = $this->getConfig('widget_title');
+$theme = $this->helper('bakery');
+$_title             = $this->getConfig('widget_title');
+$_rowCount          = $this->getConfig('row');
+$_scroll            = $this->getConfig('scroll');
+$_column            = $this->getConfig('column');
+$_scroll            = $this->getConfig('scroll');
+$numbercolumn_slide = $this->getData('column');
+$nav_prev = $this->getData('navigation_prev');
+$nav_next = $this->getData('navigation_next');
+?>
+<div class="<?php echo $this->getConfig('classes') ?>" id="<?php echo $id ?>">
+    <?php if ($title): ?>
+        <h2><?php echo $title ?></h2>
+    <?php endif ?>
+    <ul class="<?php echo $scroll==1 ? 'owl-carousel ' : '' ?>">
+        <?php foreach ($attributes as $attribute): ?>
+            <li>
+                <?php if (isset($attribute['link'])): ?>
+                    <a href="<?php echo $attribute['link'] ?>" title="<?php echo $attribute['label'] ?>">
+                <?php endif ?>
+                <?php if ($attribute['image']): ?>
+                    <?php if ($scroll == 1): ?>
+                        <img class="lazyOwl" data-src="<?php echo $attribute['image'] ?>" alt="<?php echo $attribute['label'] ?>" />
+                    <?php else: ?>
+                        <img src="<?php echo $attribute['image'] ?>" alt="<?php echo $attribute['label'] ?>" />
+                    <?php endif ?>
+                <?php else: ?>
+                    <span><?php echo $attribute['label'] ?></span>
+                <?php endif ?>
+                <?php if (isset($attribute['link'])): ?>
+                    </a>
+                <?php endif ?>
+            </li>
+        <?php endforeach ?>
+    </ul>
+    <script type="text/javascript" src="<?php echo Mage::getBaseUrl('js') ?>bakery/frontend.js"></script>
+<script type="text/javascript" src="<?php echo Mage::getBaseUrl('js') ?>bakery/frontend.js"></script>
+<?php if ($_scroll == 1):?>
+    <?php echo '<script type="text/javascript" src="'. $this->getBaseUrl().'js/bakery/owl.carousel.js"></script>'?>
+
+<script type="text/javascript">
+    jQuery(document).ready(function($) {
+
+      jQuery(".attribute").owlCarousel({
+        items : <?php echo $numbercolumn_slide; ?>,
+        lazyLoad : true,
+        navigation : true,
+        navigationText: [<?php echo $nav_prev; echo $nav_next;?>] 
+        
+      });
+
+    });
+</script>
+
+<?php endif ?>
+</div>

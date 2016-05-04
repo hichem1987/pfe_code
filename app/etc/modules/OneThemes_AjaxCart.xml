@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!--
+/******************************************************
+ * @package OneAjaxCart module for Magento 1.4.x.x and Magento 1.7.x.x
+ * @version 1.7.x.x
+ * @author http://www.http://nouthemes.com/
+ * @copyright (C) 2011- http://nouthemes.com/
+ * @license PHP files are GNU/GPL
+*******************************************************/
+-->
+<config>
+    <modules>
+        <OneThemes_AjaxCart>
+            <active>true</active>
+            <codePool>local</codePool>
+        </OneThemes_AjaxCart>
+    </modules>
+</config> 

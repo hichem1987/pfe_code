@@ -1,0 +1,150 @@
+/**Retina log**/
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (-o-min-device-pixel-ratio: 3/2),
+only screen and (min--moz-device-pixel-ratio: 1.5),
+only screen and (min-device-pixel-ratio: 1.5) {
+    .one-wrapper .header .logo img {
+        min-height: 1px;
+    }
+}
+
+
+
+
+.slide-product.owl-carousel, .slide-product.owl-carousel .products-grid{background: none;}
+.slide-product .item .product-item{border: 2px solid #fff;}
+.slide-product .item .product-item:hover {
+    border-color: #fdb822;
+}
+.slide-product .owl-page{
+	border:2px solid #fff;
+}
+.load-product .button-void{ border: 2px solid #fff;background: #fff;color: #000;}
+.load-product .button-void:hover {
+    background-color: #684f40;
+    color: #ffffff;
+}
+
+.main-service .service .services-1 .icon-big-container {
+    background: url("../images/services_1.png") no-repeat scroll center center;
+    transition: all 0.3s ease-out 0s;
+     border: 3px solid #fff;
+}
+.main-service .services-3 .icon-big-container {
+    background: url("../images/services_3.png") no-repeat scroll center center rgba(0, 0, 0, 0);
+    transition: all 0.3s ease-out 0s;border: 3px solid #fff;
+}
+.main-service .services-2 .icon-big-container {
+    background: url("../images/services_2.png") no-repeat scroll center center rgba(0, 0, 0, 0);
+    transition: all 0.3s ease-out 0s;border: 3px solid #fff;
+}
+.main-service .services-4 .icon-big-container {
+    background: url("../images/services_4.png") no-repeat scroll center center rgba(0, 0, 0, 0);
+    transition: all 0.3s ease-out 0s;border: 3px solid #fff;
+}
+.main-service .service .service-box:hover .icon-big-container {
+    border: 3px solid #fdb822;
+}
+.main-service .service .services-1:hover .icon-big-container {
+    background: url("../images/services_h1.png") no-repeat scroll center center ;
+}
+.main-service .service .services-2:hover .icon-big-container {
+    background: url("../images/services_h2.png") no-repeat scroll center center ;
+}
+.main-service .service .services-3:hover .icon-big-container {
+    background: url("../images/services_h3.png") no-repeat scroll center center ;
+}
+.main-service .service .services-4:hover .icon-big-container {
+    background: url("../images/services_h4.png") no-repeat scroll center center ;
+}
+.paralax-blog .block::after{
+     background-color: rgba(22, 22, 25, 0.8);
+}
+.paralax-blog .block .heading-small{color: #fff;}
+.block .block-title::before {  background-color: #414141!important;}
+.service .service-box h2{color: #fff;}
+.service .read-more-link {
+    color: #6f6f76;
+}
+.service .read-more-link:hover {
+    color: #fdb822;
+}
+
+.paralax-blog .block .block-static .heading-huge{
+	color: #fff;
+}
+
+.owl-carousel{background: none!important}
+.main-tab-product .tab-product .tab-content .tab-pane.active{
+    background: none;
+}
+.main-tab-product .tab-content .products-grid{background: none;}
+.main-tab-product .tab-content .products-grid .item .product-item{background: none;}
+
+
+.main-tab-product .tab-product .widget-tabs li::after{
+    background: #161619;
+}
+.main-tab-product .tab-content .name-price h2{color: #fff;}
+.main-tab-product .tab-content .name-price .price-box span{
+    color: #fff;
+}
+.main-blog-image::after{
+    background-color: rgba(22, 22, 25, 0.8);
+}
+.icon-opening-wrapper.big-version h2{color: #fff;}
+.icon-opening-wrapper.big-version .icon-opening{
+    border-color:#fff;  color: #fff;
+}
+.icon-opening-wrapper.big-version:hover .icon-opening{
+    border-color:#fdb822; background: #fdb822;
+}
+.main-top .heading-wrapper-title h3 span, .main-logobrand .heading-wrapper-title h3 span, .icon-opening-wrapper.big-version {
+    color: #fff;
+}
+.team_member .block{
+    background: none;
+}
+.profile .profile-box::after{border-color:#fff;}
+.profile:hover .profile-box::after {
+    border-color: #fdb822;
+}
+
+.col-left .block .block-title::before {
+    background: none !important;
+}
+.main-breadcrumbs li a{color: #fff;}
+.main-breadcrumbs li a:hover{
+    color: #fdb822;
+}
+.toolbar .toolbar-top .sorter{padding-bottom: 0;}
+.product-view{background: #fff;}
+#one-sticky-header-sticky-wrapper.is-sticky #one-sticky-header{
+    background: #161619;
+}
+.container-main .main-content{background: #fff;}
+body.cms-home .container-main .main-content{background: none;}
+#france{
+    .main-tab-product .tab-product .tab-content .tab-pane.active{background: #161619}
+}
+.profile .profile-box{
+    color: #fff;
+}
+.profile:hover .profile-box{
+    color: #fdb822;
+}
+.menu-recent .bxslider li img{border-color: #fff;}
+.menu-recent .bxslider li:hover img{border-color: #fdb822;}
+.team_member .block .block-title strong span{color:#fff;}
+.store-switcher select{
+    text-transform: capitalize;
+}
+.store-switcher{display:inline-block;width:100%;text-align:center;}
+.store-switcher .select{
+	display: inline-block;background: #fff;
+    float: none !important;
+    margin: auto;
+}
+
+
+

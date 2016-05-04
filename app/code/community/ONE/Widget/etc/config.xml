@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<!--
+/**
+* @category    ONE
+* @package     ONE_Widget
+* @copyright   Copyright (C) 2008-2014 nouthemes.com. All Rights Reserved.
+* @license     GNU General Public License version 2 or later
+* @author      nouthemes.com
+* @email       support.nouthemes.com
+*/
+-->
+<config>
+    <modules>
+        <ONE_Widget>
+            <version>2.0</version>
+        </ONE_Widget>
+    </modules>
+
+    <frontend>
+        <routers>
+            <onewidget>
+                <use>standard</use>
+                <args>
+                    <module>ONE_Widget</module>
+                    <frontName>onewidget</frontName>
+                </args>
+            </onewidget>
+        </routers>
+        <layout>
+            <updates>
+                <onewidget>
+                    <file>one_widget.xml</file>
+                </onewidget>
+            </updates>
+        </layout>
+    </frontend>
+
+    <global>
+        <models>
+            <onewidget>
+                <class>ONE_Widget_Model</class>
+            </onewidget>
+        </models>
+        <blocks>
+            <onewidget>
+                <class>ONE_Widget_Block</class>
+            </onewidget>
+        </blocks>
+        <helpers>
+            <onewidget>
+                <class>ONE_Widget_Helper</class>
+            </onewidget>
+        </helpers>
+    </global>
+
+    <admin>
+        <routers>
+            <onewidget>
+                <use>admin</use>
+                <args>
+                    <module>ONE_Widget</module>
+                    <frontName>onewidget</frontName>
+                </args>
+            </onewidget>
+        </routers>
+    </admin>
+
+    <adminhtml>
+        <layout>
+            <updates>
+                <onewidget>
+                    <file>one_widget.xml</file>
+                </onewidget>
+            </updates>
+        </layout>
+        <cms>
+            <browser>
+                <extensions>
+                    <media_allowed>
+                        <mp4>1</mp4>
+                        <webm>1</webm>
+                    </media_allowed>
+                </extensions>
+            </browser>
+        </cms>
+    </adminhtml>
+</config>

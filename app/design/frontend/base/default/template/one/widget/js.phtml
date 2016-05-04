@@ -1,0 +1,28 @@
+<?php
+/**
+ * @category    ONE
+ * @package     ONE_Widget
+ * @copyright   Copyright (C) 2008-2014 nouthemes.com. All Rights Reserved.
+ * @license     GNU General Public License version 2 or later
+ * @author      nouthemes.com
+ * @email       support.nouthemes.com
+ */
+?>
+<script type="text/javascript">
+    var ONE = ONE || {};
+    ONE.FORM_KEY = '<?php echo Mage::getSingleton('core/session')->getFormKey() ?>';
+
+    function setLocationWidget(url){
+        if (url.indexOf('form_key/') !== -1){
+            var part = url.split('form_key/')[1],
+                formKey = part.split('/')[0];
+
+            if (!formKey) return;
+
+            var newUrl = url.replace(formKey, ONE.FORM_KEY || '');
+
+            if (setLocation) setLocation(newUrl);
+            else window.location.href = newUrl;
+        }
+    }
+</script>
